@@ -4,3 +4,4 @@ VIRTUAL ENVIORMENT/bin/activate
 *.fish
 *.ps1
 /VIRTUAL ENVIORMENT/bin
+/venv
