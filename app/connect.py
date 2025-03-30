@@ -113,6 +113,6 @@ def health_check():
 if __name__ == '__main__':
     # Load model before starting the server
     if load_model_and_classes():
-        app.run(host="10.142.42.241", port=5000)
+        app.run(host="0.0.0.0", port=5050)
     else:
         print("Failed to load model. Exiting.")
