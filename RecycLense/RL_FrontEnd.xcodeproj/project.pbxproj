@@ -24,9 +24,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		2AFEA8212D98E698006EDE77 /* RecycLense.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RecycLense.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		2AFEA8312D98E699006EDE77 /* RecycLenseTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RecycLenseTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		2AFEA83B2D98E699006EDE77 /* RecycLenseUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RecycLenseUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		2AFEA8212D98E698006EDE77 /* RL_FrontEnd.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RL_FrontEnd.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		2AFEA8312D98E699006EDE77 /* RL_FrontEndTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RL_FrontEndTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		2AFEA83B2D98E699006EDE77 /* RL_FrontEndUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RL_FrontEndUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -85,9 +85,9 @@
 		2AFEA8222D98E698006EDE77 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				2AFEA8212D98E698006EDE77 /* RecycLense.app */,
-				2AFEA8312D98E699006EDE77 /* RecycLenseTests.xctest */,
-				2AFEA83B2D98E699006EDE77 /* RecycLenseUITests.xctest */,
+				2AFEA8212D98E698006EDE77 /* RL_FrontEnd.app */,
+				2AFEA8312D98E699006EDE77 /* RL_FrontEndTests.xctest */,
+				2AFEA83B2D98E699006EDE77 /* RL_FrontEndUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -95,9 +95,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		2AFEA8202D98E698006EDE77 /* RecycLense */ = {
+		2AFEA8202D98E698006EDE77 /* RL_FrontEnd */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 2AFEA8452D98E699006EDE77 /* Build configuration list for PBXNativeTarget "RecycLense" */;
+			buildConfigurationList = 2AFEA8452D98E699006EDE77 /* Build configuration list for PBXNativeTarget "RL_FrontEnd" */;
 			buildPhases = (
 				2AFEA81D2D98E698006EDE77 /* Sources */,
 				2AFEA81E2D98E698006EDE77 /* Frameworks */,
@@ -110,16 +110,16 @@
 			fileSystemSynchronizedGroups = (
 				2AFEA8232D98E698006EDE77 /* RecycLense */,
 			);
-			name = RecycLense;
+			name = RL_FrontEnd;
 			packageProductDependencies = (
 			);
 			productName = RecycLense;
-			productReference = 2AFEA8212D98E698006EDE77 /* RecycLense.app */;
+			productReference = 2AFEA8212D98E698006EDE77 /* RL_FrontEnd.app */;
 			productType = "com.apple.product-type.application";
 		};
-		2AFEA8302D98E699006EDE77 /* RecycLenseTests */ = {
+		2AFEA8302D98E699006EDE77 /* RL_FrontEndTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 2AFEA8482D98E699006EDE77 /* Build configuration list for PBXNativeTarget "RecycLenseTests" */;
+			buildConfigurationList = 2AFEA8482D98E699006EDE77 /* Build configuration list for PBXNativeTarget "RL_FrontEndTests" */;
 			buildPhases = (
 				2AFEA82D2D98E699006EDE77 /* Sources */,
 				2AFEA82E2D98E699006EDE77 /* Frameworks */,
@@ -133,16 +133,16 @@
 			fileSystemSynchronizedGroups = (
 				2AFEA8342D98E699006EDE77 /* RecycLenseTests */,
 			);
-			name = RecycLenseTests;
+			name = RL_FrontEndTests;
 			packageProductDependencies = (
 			);
 			productName = RecycLenseTests;
-			productReference = 2AFEA8312D98E699006EDE77 /* RecycLenseTests.xctest */;
+			productReference = 2AFEA8312D98E699006EDE77 /* RL_FrontEndTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		2AFEA83A2D98E699006EDE77 /* RecycLenseUITests */ = {
+		2AFEA83A2D98E699006EDE77 /* RL_FrontEndUITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 2AFEA84B2D98E699006EDE77 /* Build configuration list for PBXNativeTarget "RecycLenseUITests" */;
+			buildConfigurationList = 2AFEA84B2D98E699006EDE77 /* Build configuration list for PBXNativeTarget "RL_FrontEndUITests" */;
 			buildPhases = (
 				2AFEA8372D98E699006EDE77 /* Sources */,
 				2AFEA8382D98E699006EDE77 /* Frameworks */,
@@ -156,11 +156,11 @@
 			fileSystemSynchronizedGroups = (
 				2AFEA83E2D98E699006EDE77 /* RecycLenseUITests */,
 			);
-			name = RecycLenseUITests;
+			name = RL_FrontEndUITests;
 			packageProductDependencies = (
 			);
 			productName = RecycLenseUITests;
-			productReference = 2AFEA83B2D98E699006EDE77 /* RecycLenseUITests.xctest */;
+			productReference = 2AFEA83B2D98E699006EDE77 /* RL_FrontEndUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
@@ -186,7 +186,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 2AFEA81C2D98E698006EDE77 /* Build configuration list for PBXProject "RecycLense" */;
+			buildConfigurationList = 2AFEA81C2D98E698006EDE77 /* Build configuration list for PBXProject "RL_FrontEnd" */;
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -200,9 +200,9 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				2AFEA8202D98E698006EDE77 /* RecycLense */,
-				2AFEA8302D98E699006EDE77 /* RecycLenseTests */,
-				2AFEA83A2D98E699006EDE77 /* RecycLenseUITests */,
+				2AFEA8202D98E698006EDE77 /* RL_FrontEnd */,
+				2AFEA8302D98E699006EDE77 /* RL_FrontEndTests */,
+				2AFEA83A2D98E699006EDE77 /* RL_FrontEndUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -258,12 +258,12 @@
 /* Begin PBXTargetDependency section */
 		2AFEA8332D98E699006EDE77 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 2AFEA8202D98E698006EDE77 /* RecycLense */;
+			target = 2AFEA8202D98E698006EDE77 /* RL_FrontEnd */;
 			targetProxy = 2AFEA8322D98E699006EDE77 /* PBXContainerItemProxy */;
 		};
 		2AFEA83D2D98E699006EDE77 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 2AFEA8202D98E698006EDE77 /* RecycLense */;
+			target = 2AFEA8202D98E698006EDE77 /* RL_FrontEnd */;
 			targetProxy = 2AFEA83C2D98E699006EDE77 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -458,7 +458,7 @@
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/RecycLense.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/RecycLense";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/RL_FrontEnd.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/RL_FrontEnd";
 			};
 			name = Debug;
 		};
@@ -476,7 +476,7 @@
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/RecycLense.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/RecycLense";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/RL_FrontEnd.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/RL_FrontEnd";
 			};
 			name = Release;
 		};
@@ -515,7 +515,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		2AFEA81C2D98E698006EDE77 /* Build configuration list for PBXProject "RecycLense" */ = {
+		2AFEA81C2D98E698006EDE77 /* Build configuration list for PBXProject "RL_FrontEnd" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				2AFEA8432D98E699006EDE77 /* Debug */,
@@ -524,7 +524,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		2AFEA8452D98E699006EDE77 /* Build configuration list for PBXNativeTarget "RecycLense" */ = {
+		2AFEA8452D98E699006EDE77 /* Build configuration list for PBXNativeTarget "RL_FrontEnd" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				2AFEA8462D98E699006EDE77 /* Debug */,
@@ -533,7 +533,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		2AFEA8482D98E699006EDE77 /* Build configuration list for PBXNativeTarget "RecycLenseTests" */ = {
+		2AFEA8482D98E699006EDE77 /* Build configuration list for PBXNativeTarget "RL_FrontEndTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				2AFEA8492D98E699006EDE77 /* Debug */,
@@ -542,7 +542,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		2AFEA84B2D98E699006EDE77 /* Build configuration list for PBXNativeTarget "RecycLenseUITests" */ = {
+		2AFEA84B2D98E699006EDE77 /* Build configuration list for PBXNativeTarget "RL_FrontEndUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				2AFEA84C2D98E699006EDE77 /* Debug */,
