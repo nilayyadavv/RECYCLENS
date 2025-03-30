@@ -136,14 +136,22 @@ struct ContentView: View {
                     return
                 }
                 
-                if let data = data,
-                   let resultJSON = try? JSONSerialization.jsonObject(with: data, options: []) as? [String: Any],
-                   let classification = resultJSON["classification"] as? String {
-                    classificationResult = classification // Store the classification result
-                    showResultScreen = true // Show result screen
-                } else {
-                    print("Failed to parse response.")
+                if let data = data {
+                    do {
+                if let resultJSON = try JSONSerialization.jsonObject(with: data, options: []) as? [String: Any],
+                    let className = resultJSON["class_name"] as? String,
+                    let category = resultJSON["disposal_category"] as? String,
+                    let confidence = resultJSON["confidence"] as? Double {
+            
+                    classificationResult = "\(className) → \(category.capitalized) (\(String(format: "%.1f", confidence))%)"
+                    showResultScreen = true
+                    } else {
+                        print("Invalid response format.")
+                    }
+                } catch {
+                    print("Failed to parse JSON:", error)
                 }
+}
             }
         }
         
