@@ -143,7 +143,7 @@ struct ContentView: View {
                     let category = resultJSON["disposal_category"] as? String,
                     let confidence = resultJSON["confidence"] as? Double {
             
-                    classificationResult = "\(className) → \(category.capitalized) (\(String(format: "%.1f", confidence))%)"
+                    classificationResult = "\(category.capitalized) (\(String(format: "%.1f", confidence))%)"
                     showResultScreen = true
                     } else {
                         print("Invalid response format.")
