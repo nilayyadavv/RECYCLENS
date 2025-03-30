@@ -15,4 +15,5 @@ Used the FLASK package in PYTHON to create a back-end server where the front and
 ## Running RecycLENS on your local device 
 Preferably, use a Mac OS laptop so you can download the XCODE application. This will allow a proper connection from your iPhone to your Mac to run the app locally. **Make sure that the developer mode is enabled on your iPhone device, and iOS is updated properly.**
 
-`code`
+```console
+asdfasdfads```
