@@ -103,7 +103,7 @@ struct ContentView: View {
     }
 
     func uploadImage(image: UIImage) {
-        guard let url = URL(string: "http://your-backend-url/upload") else { return } // Replace with your backend URL
+        guard let url = URL(string: "http://127.0.0.1:5000/") else { return }
         
         var request = URLRequest(url: url)
         request.httpMethod = "POST"
