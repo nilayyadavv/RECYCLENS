@@ -103,7 +103,7 @@ struct ContentView: View {
     }
 
     func uploadImage(image: UIImage) {
-        guard let url = URL(string: "http://10.142.42.241:5050/") else { return }
+        guard let url = URL(string: "http://10.142.42.241:5050/upload") else { return }
         
         var request = URLRequest(url: url)
         request.httpMethod = "POST"
