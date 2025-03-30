@@ -9,26 +9,24 @@ from tensorflow.keras.models import load_model
 
 app = Flask(__name__)
 
+# Global variables for model and class information
 MODEL_DIR = "../models"
-TFLITE_MODEL_PATH = os.path.join(MODEL_DIR, "garbage_classifier.tflite")
+MODEL_PATH = os.path.join(MODEL_DIR, "garbage_classifier.h5")
 CLASS_NAMES_PATH = os.path.join(MODEL_DIR, "class_names.json")
 DISPOSAL_MAP_PATH = os.path.join(MODEL_DIR, "disposal_mapping.json")
 IMG_SIZE = (224, 224)
 
-
+# Load model and class information on startup
+model = None
 class_names = None
 disposal_mapping = None
-interpreter = None
-
 
 def load_model_and_classes():
-    global class_names, disposal_mapping, interpreter
+    global model, class_names, disposal_mapping
     
     try:
-        print("Loading TFLite model and class information...")
-        
-        interpreter = tf.lite.Interpreter(model_path=TFLITE_MODEL_PATH)
-        interpreter.allocate_tensors()
+        print("Loading classification model and class information...")
+        model = load_model(MODEL_PATH, compile=False)
         
         with open(CLASS_NAMES_PATH, 'r') as f:
             class_names = json.load(f)
@@ -36,7 +34,7 @@ def load_model_and_classes():
         with open(DISPOSAL_MAP_PATH, 'r') as f:
             disposal_mapping = json.load(f)
             
-        print(f"TFLite model loaded successfully. Found {len(class_names)} classes.")
+        print(f"Model loaded successfully. Found {len(class_names)} classes.")
         return True
     except Exception as e:
         print(f"Error loading model or class information: {str(e)}")
@@ -54,23 +52,18 @@ def upload_image():
         # Open the image file for processing
         image = Image.open(file.stream)
         
-        # Simulate classification processing (replace this with actual ML model code)
-        time.sleep(5)  # Simulate processing delay
-        classification_result = classify_image(image)  # Replace with your classification logic
+        # Perform classification
+        classification_result = classify_image(image)
         
         # Return the classification result as JSON
-        return jsonify({"classification": classification_result})
+        return jsonify(classification_result)
     
     except Exception as e:
         return jsonify({"error": str(e)}), 500
 
 def classify_image(image):
-    """Classify the uploaded image using the TFLite model"""
-    global interpreter, class_names, disposal_mapping
-    
-    # Get input and output tensors
-    input_details = interpreter.get_input_details()
-    output_details = interpreter.get_output_details()
+    """Classify the uploaded image using the pre-trained model"""
+    global model, class_names, disposal_mapping
     
     # Convert PIL image to numpy array
     img_array = np.array(image)
@@ -87,17 +80,11 @@ def classify_image(image):
     # Preprocess for EfficientNet
     preprocessed = tf.keras.applications.efficientnet.preprocess_input(resized)
     
-    # Add batch dimension and ensure correct data type
-    input_data = np.expand_dims(preprocessed, axis=0).astype(input_details[0]['dtype'])
+    # Add batch dimension
+    input_data = np.expand_dims(preprocessed, axis=0)
     
-    # Set tensor data
-    interpreter.set_tensor(input_details[0]['index'], input_data)
-    
-    # Run inference
-    interpreter.invoke()
-    
-    # Get output predictions
-    predictions = interpreter.get_tensor(output_details[0]['index'])[0]
+    # Make prediction
+    predictions = model.predict(input_data)[0]
     
     # Get top prediction
     top_class_idx = np.argmax(predictions)
@@ -116,11 +103,10 @@ def classify_image(image):
     
     return result
 
-
-
+# Health check endpoint
 @app.route('/health', methods=['GET'])
 def health_check():
-    if interpreter is None:
+    if model is None:
         return jsonify({"status": "error", "message": "Model not loaded"}), 503
     return jsonify({"status": "ok", "message": "Service is running"}), 200
 
@@ -130,4 +116,3 @@ if __name__ == '__main__':
         app.run(debug=True)
     else:
         print("Failed to load model. Exiting.")
-
