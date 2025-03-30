@@ -24,4 +24,9 @@ cd app
 python connect.py
 ```
 ### Running the App
-Connect your iPhone to your Mac computer or laptop with a charger. Make sure that Developer Mode is turned on in Settings > Privacy. Once your phone is configured for usage, run the front end code on the XCode IDE. **Make sure that the server has been activated.** RecycLENS should now be ready to run!
+Connect your iPhone to your Mac computer or laptop with a charger. Make sure that Developer Mode is turned on in Settings > Privacy. Once your phone is configured for usage, run the front end code on the XCode IDE. **Make sure that the server has been activated.** Configure the URL on XCode to match the IP address of your computer.
+```
+// this line should be directly underneath the uploadImage function on Xcode/Swift
+guard let url = URL(string: "http://{your computer's IP address}:5050/upload") else { return }
+```
+RecycLENS should now be ready to run!
