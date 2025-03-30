@@ -15,5 +15,10 @@ Used the FLASK package in PYTHON to create a back-end server where the front and
 ## Running RecycLENS on your local device 
 Preferably, use a Mac OS laptop so you can download the XCODE application. This will allow a proper connection from your iPhone to your Mac to run the app locally. **Make sure that the developer mode is enabled on your iPhone device, and iOS is updated properly.**
 
+### Installing Requirements
+For all the projects to be compatible, make sure your Python version is between 3.8 and 3.12 when creating your virtual environment. Make sure that the virtual environment is activated before activating the local server.
 ```console
-asdfasdfads```
+python3.12 -m venv venv
+pip install -r requirements.txt
+source venv/bin/activate
+```
