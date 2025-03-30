@@ -23,3 +23,5 @@ source venv/bin/activate
 cd app
 python connect.py
 ```
+### Running the App
+Connect your iPhone to your Mac computer or laptop with a charger. Make sure that Developer Mode is turned on in Settings > Privacy. Once your phone is configured for usage, run the front end code on the XCode IDE. **Make sure that the server has been activated.** RecycLENS should now be ready to run!
